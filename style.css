@@ -2,7 +2,7 @@
  * MAIN LAYOUT ELEMENTS
  **************************************/
 .layout-wrapper {
-    background-image: url("elaina-wandering-witch.jpg") !important;
+    background-image: url("bg.png") !important;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -15,14 +15,14 @@
 
 .footer-wrapper {
     background-color: rgba(84, 194, 131, 0.9) !important;
-    border-top: 1px solid rgba(156, 100, 226, 0.3);
+    border-top: 1px solid rgba(108, 226, 100, 0.3);
 }
 
 /**************************************
  * NAVIGATION BAR
  **************************************/
 .navigation-background {
-    background-color: rgba(70, 40, 110, 0.85) !important;
+    background-color: rgba(17, 40, 27, 0.85) !important;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
     transition: all 0.3s ease;
 }
@@ -65,7 +65,7 @@
             text-shadow: 0 0 12px rgba(255, 255, 255, 0.8) !important;
 
             @media screen and (min-width: 1024px) {
-                border-bottom: 3px solid #ede5ff !important;
+                border-bottom: 3px solid #e5ffe7 !important;
             }
         }
     }
@@ -91,12 +91,12 @@
         transition: ease 300ms;
 
         @media screen and (min-width: 1024px) {
-            background-color: rgb(96 39 191) !important;
+            background-color: rgb(39, 191, 90) !important;
         }
     }
 
     @media screen and (max-width: 1024px) {
-        background-color: rgb(80 2 208) !important;
+        background-color: rgb(2, 208, 43) !important;
     }
 }
 
@@ -104,11 +104,11 @@
  * SIDEBAR STYLING
  **************************************/
 .sidebar-wrapper {
-    border: 2px solid rgba(128, 79, 178, 0.7);
-    background-color: rgba(20, 0, 30, 0.7);
+    border: 2px solid rgba(79, 178, 107, 0.7);
+    background-color: rgba(0, 30, 11, 0.7);
     padding: 18px;
     border-radius: 25px !important;
-    box-shadow: 0 0 15px rgba(106, 61, 139, 0.6);
+    box-shadow: 0 0 15px rgba(61, 139, 82, 0.6);
 }
 
 /* Sidebar List Items */
@@ -131,8 +131,8 @@
 
 
     &.is-active {
-        border-bottom: 1px solid rgba(156, 100, 226, 0.8) !important;
-        background-image: linear-gradient(rgba(158, 64, 255, 0), rgba(161, 90, 255, 0.15));
+        border-bottom: 1px solid rgba(100, 226, 138, 0.8) !important;
+        background-image: linear-gradient(rgba(83, 255, 64, 0), rgba(90, 255, 162, 0.15));
         padding-left: 5%;
         border-radius: 12px 0 !important;
         transition: background-color .4s ease;
@@ -142,14 +142,14 @@
         }
 
         & span {
-            color: #cea0ff !important;
+            color: #a5ffa0 !important;
         }
     }
 }
 
 /* Sidebar Accordion */
 .sidebar-accordion-icon {
-    color: rgba(156, 100, 226, 0.9) !important;
+    color: rgba(100, 226, 136, 0.9) !important;
     transition: transform 0.3s ease;
 
     &:hover {
@@ -166,8 +166,8 @@
 /* Clear button */
 .clearAll-btn {
     &:hover {
-        color: #e6b2ff !important;
-        text-shadow: 0 0 8px #d990fc7d !important;
+        color: #b2ffba !important;
+        text-shadow: 0 0 8px #90fcb07d !important;
     }
 }
 
@@ -179,23 +179,23 @@
 }
 .dropdown-button {
     background-color: rgba(39, 92, 61, 0.7) !important;
-    border: 1px solid rgba(156, 100, 226, 0.75) !important;
-    box-shadow: 0 0 5px rgba(156, 100, 226, 0.5) !important;
+    border: 1px solid rgba(100, 226, 112, 0.75) !important;
+    box-shadow: 0 0 5px rgba(104, 226, 100, 0.5) !important;
     border-radius: 5px;
     transition: all 0.2s ease;
 
     &:hover {
         background-color: rgba(71, 168, 111, 0.8) !important;
-        box-shadow: 0 0 8px rgba(156, 100, 226, 0.7) !important;
+        box-shadow: 0 0 8px rgba(100, 226, 112, 0.7) !important;
         transform: translateY(-2px);
     }
 }
 
 .dropdown-list {
-    border: 1px solid rgba(156, 100, 226, 0.8) !important;
-    background: radial-gradient(circle, rgba(90, 40, 120, 0.9), rgba(60, 20, 80, 0.9));
+    border: 1px solid rgba(110, 226, 100, 0.8) !important;
+    background: radial-gradient(circle, rgba(40, 120, 52, 0.9), rgba(20, 80, 20, 0.9));
     border-radius: 6px !important;
-    box-shadow: 0 0 10px rgba(156, 100, 226, 0.6) !important;
+    box-shadow: 0 0 10px rgba(100, 226, 110, 0.6) !important;
 
     li button {
         transition: all 0.2s ease !important;
@@ -208,7 +208,7 @@
     margin: 2px;
 
     &:hover {
-        background: rgba(156, 100, 226, 0.8) !important;
+        background: rgba(100, 226, 112, 0.8) !important;
         transform: translateX(3px);
     }
 }
@@ -218,31 +218,31 @@
  * SLIDER STYLING
  **************************************/
 .MuiSlider-root {
-    color: rgba(156, 100, 226, 0.9) !important;
+    color: rgba(102, 226, 100, 0.9) !important;
 
     /* Styling for track element */
     & .MuiSlider-track {
         background-image: linear-gradient(
                 to right,
-                rgba(156, 100, 226, 0.8),
-                rgba(177, 132, 227, 0.9)
+                rgba(100, 226, 112, 0.8),
+                rgba(132, 227, 140, 0.9)
         ) !important;
     }
 
     /* Thumb + label/text elements */
     & .MuiSlider-thumb {
         z-index: 9999;
-        background-color: rgba(156, 100, 226, 0.9) !important;
+        background-color: rgba(119, 226, 100, 0.9) !important;
         border: 2px solid rgba(255, 255, 255, 0.3);
-        box-shadow: 0 0 12px rgba(156, 100, 226, 0.5) !important;
+        box-shadow: 0 0 12px rgba(100, 226, 121, 0.5) !important;
         transition: all 0.3s ease;
 
         /* Label showing corresponding year */
         & > * > * {
             background: linear-gradient(
                     to bottom right,
-                    rgba(20, 0, 30, 0.95),
-                    rgba(50, 20, 70, 0.95)
+                    rgba(0, 30, 5, 0.95),
+                    rgba(32, 70, 20, 0.95)
             ) !important;
             border: 1px solid rgba(156, 100, 226, 0.6);
             padding: 18px 18px;
@@ -264,28 +264,28 @@
 
         /* Text spans for label showing corresponding year */
         & .MuiSlider-valueLabel span span {
-            color: #d9b1ff !important;
-            text-shadow: 0 0 6px rgba(156, 100, 226, 0.5);
+            color: #b1ffb1 !important;
+            text-shadow: 0 0 6px rgba(106, 226, 100, 0.5);
             transform: rotate(-44deg) !important;
         }
     }
 
     /* Hover effect for main track */
     &:hover .MuiSlider-track {
-        box-shadow: 0 0 12px rgba(156, 100, 226, 0.6);
+        box-shadow: 0 0 12px rgba(100, 226, 129, 0.6);
     }
 }
 
 /* Premiere dates for MuiSlider */
 .premiere-dates-wrapper {
     color: #c5b0e5 !important;
-    border: 1px solid rgba(156, 100, 226, 0.8) !important;
-    background-color: rgba(40, 10, 60, 0.7) !important;
-    box-shadow: 0 0 5px rgba(106, 61, 139, 0.5);
+    border: 1px solid rgba(100, 226, 138, 0.8) !important;
+    background-color: rgba(16, 60, 10, 0.7) !important;
+    box-shadow: 0 0 5px rgba(64, 139, 61, 0.5);
     transition: all 0.2s ease;
 
     > button {
-        color: #c5b0e5 !important;
+        color: #b2e5b0 !important;
 
         > svg {
             transition: all 0.2s ease;
@@ -304,8 +304,8 @@
 /* Text below slider */
 .premiereManualChanger-cta:hover {
     transition: none;
-    color: #e6b2ff !important;
-    text-shadow: 0 0 8px #d990fc7d !important;
+    color: #b2ffbc !important;
+    text-shadow: 0 0 8px #90fcad7d !important;
 }
 
 /**************************************
@@ -314,16 +314,16 @@
 /* Input Fields */
 .input-element {
     border-radius: 6px !important;
-    border: 1px solid rgba(156, 100, 226, 0.8) !important;
-    background-color: rgba(40, 20, 70, 0.5) !important;
-    box-shadow: 0 0 5px rgba(106, 61, 139, 0.5);
+    border: 1px solid rgba(100, 226, 125, 0.8) !important;
+    background-color: rgba(20, 70, 37, 0.5) !important;
+    box-shadow: 0 0 5px rgba(61, 139, 83, 0.5);
     transition: all 0.2s ease;
     color: white !important;
 
     &:hover, &:focus {
-        text-shadow: 0 0 10px rgba(156, 100, 226, 0.8) !important;
-        box-shadow: 0 0 12px rgba(156, 100, 226, 0.7) !important;
-        border-color: rgba(180, 130, 250, 0.9) !important;
+        text-shadow: 0 0 10px rgba(100, 226, 148, 0.8) !important;
+        box-shadow: 0 0 12px rgba(100, 226, 119, 0.7) !important;
+        border-color: rgba(152, 250, 130, 0.9) !important;
         transform: translateY(-1px);
     }
 }
@@ -335,16 +335,16 @@
 /* Dropdown Controls */
 .custom-dropdown-control,
 .advanced-tags-btn {
-    color: #c5b0e5;
-    border: 1px solid rgba(156, 100, 226, 0.8) !important;
-    background-color: rgba(40, 10, 60, 0.7) !important;
-    box-shadow: 0 0 5px rgba(106, 61, 139, 0.5);
+    color: #b0e5b9;
+    border: 1px solid rgba(100, 226, 108, 0.8) !important;
+    background-color: rgba(10, 60, 27, 0.7) !important;
+    box-shadow: 0 0 5px rgba(61, 139, 62, 0.5);
     transition: all 0.2s ease;
 
     &:hover {
-        text-shadow: 0 0 10px rgba(156, 100, 226, 0.8) !important;
-        box-shadow: 0 0 12px rgba(156, 100, 226, 0.7) !important;
-        border-color: rgba(180, 130, 250, 0.9) !important;
+        text-shadow: 0 0 10px rgba(100, 226, 115, 0.8) !important;
+        box-shadow: 0 0 12px rgba(100, 226, 131, 0.7) !important;
+        border-color: rgba(130, 250, 144, 0.9) !important;
         transform: translateY(-1px);
     }
 
@@ -374,22 +374,22 @@
 .custom-async-dropdown:has(.css-26l3qy-menu) .custom-dropdown-control,
     /* Check if the dropdown div exists */
 .custom-async-dropdown:has(:nth-child(3)) .custom-dropdown-control {
-    text-shadow: 0 0 10px rgba(156, 100, 226, 0.8) !important;
-    box-shadow: 0 0 12px rgba(156, 100, 226, 0.7) !important;
-    border-color: rgba(180, 130, 250, 0.9) !important;
+    text-shadow: 0 0 10px rgba(100, 226, 119, 0.8) !important;
+    box-shadow: 0 0 12px rgba(117, 226, 100, 0.7) !important;
+    border-color: rgba(146, 250, 130, 0.9) !important;
     transform: translateY(-1px);
 }
 
 /* Dropdown Animation */
 .custom-dropdown-control ~ [class*="css-"] {
-    background-color: rgba(40, 10, 60, 0.85) !important;
+    background-color: rgba(17, 60, 10, 0.85) !important;
     animation: dropdown 0.3s ease-out forwards;
     overflow: hidden;
     max-height: 0;
     opacity: 0;
     display: block !important;
     border-radius: 6px;
-    border: 1px solid rgba(156, 100, 226, 0.6);
+    border: 1px solid rgba(100, 226, 119, 0.6);
 }
 
 @keyframes dropdown {
@@ -404,17 +404,17 @@
  **************************************/
 .view-content-wrapper {
     border-radius: 25px 0 0 !important;
-    box-shadow: 0 0 20px rgba(106, 61, 139, 0.6) !important;
-    background-color: rgba(20, 0, 30, 0.7) !important;
-    border: 2px solid rgba(156, 100, 226, 0.7) !important;
+    box-shadow: 0 0 20px rgba(61, 139, 78, 0.6) !important;
+    background-color: rgba(2, 30, 0, 0.7) !important;
+    border: 2px solid rgba(100, 226, 108, 0.7) !important;
 }
 
 /* Control buttons for main content */
 .view-content-header-button {
     &:hover {
         &, * {
-            color: #e6b2ff !important;
-            text-shadow: 0 0 8px #d990fc7d !important;
+            color: #b2ffb5 !important;
+            text-shadow: 0 0 8px #90fc9c7d !important;
         }
     }
 }
@@ -422,16 +422,16 @@
 /* View Changer Buttons */
 .view-changer-button {
     background-color: rgba(39, 92, 61, 0.7) !important;
-    border: 1px solid rgba(156, 100, 226, 0.75) !important;
-    box-shadow: 0 0 5px rgba(156, 100, 226, 0.5) !important;
+    border: 1px solid rgba(115, 226, 100, 0.75) !important;
+    box-shadow: 0 0 5px rgba(100, 226, 119, 0.5) !important;
     transition: all 0.2s ease;
 
     &:hover {
-        background-color: rgba(131, 41, 189, 0.8) !important;
+        background-color: rgba(48, 189, 41, 0.8) !important;
     }
 
     &.is-active {
-        box-shadow: 0 0 8px rgb(190 139 255) !important;
+        box-shadow: 0 0 8px rgb(141, 255, 139) !important;
         scale: 1.015 !important;
     }
 }
@@ -445,22 +445,22 @@
  **************************************/
 .settingsContent-wrapper {
     border-radius: 8px !important;
-    box-shadow: 0 0 20px rgba(106, 61, 139, 0.6) !important;
-    background-color: rgba(20, 0, 30, 0.7) !important;
-    border: 2px solid rgba(156, 100, 226, 0.7) !important;
+    box-shadow: 0 0 20px rgba(61, 139, 75, 0.6) !important;
+    background-color: rgba(0, 30, 0, 0.7) !important;
+    border: 2px solid rgba(100, 226, 110, 0.7) !important;
 }
 
 .button-wrapper .button {
     color: white !important;
     background-color: rgba(39, 92, 61, 0.7) !important;
-    border: 1px solid rgba(156, 100, 226, 0.75) !important;
-    box-shadow: 0 0 5px rgba(156, 100, 226, 0.5) !important;
+    border: 1px solid rgba(100, 226, 117, 0.75) !important;
+    box-shadow: 0 0 5px rgba(100, 226, 133, 0.5) !important;
     border-radius: 20px 0;
     transition: all 0.2s ease;
 
     &:hover {
         background-color: rgba(71, 168, 111, 0.8) !important;
-        box-shadow: 0 0 8px rgba(156, 100, 226, 0.7) !important;
+        box-shadow: 0 0 8px rgba(100, 226, 125, 0.7) !important;
     }
 }
 
@@ -470,10 +470,10 @@
 /* Back to Top Button */
 .back-to-top-btn {
     z-index: 9999 !important;
-    background-color: rgba(39, 92, 61, 0.85) !important;
-    border: 2px solid rgba(156, 100, 226, 0.8) !important;
-    box-shadow: 0 0 10px rgba(106, 61, 139, 0.6) !important;
-    color: #d4c0ff !important;
+    background-color: rgba(39, 92, 39, 0.85) !important;
+    border: 2px solid rgba(100, 226, 110, 0.8) !important;
+    box-shadow: 0 0 10px rgba(61, 139, 82, 0.6) !important;
+    color: #c0ffc8 !important;
     opacity: 0.9 !important;
     transition: all 0.25s ease;
     animation: fadeIn 0.3s ease-in-out forwards;
@@ -509,38 +509,38 @@
  * TABLE STYLING
  **************************************/
 .table-header-arrow.is-active {
-    color: #b39ddb !important;
+    color: #9ddba5 !important;
 }
 
 /* Table Rows */
 .listRowDesktop-wrapper {
-    background-color: rgba(80, 20, 120, 0.15) !important;
-    border-bottom: 1px solid rgba(156, 100, 226, 0.6);
-    border-left: 1px solid rgba(156, 100, 226, 0.6);
+    background-color: rgba(20, 120, 37, 0.15) !important;
+    border-bottom: 1px solid rgba(104, 226, 100, 0.6);
+    border-left: 1px solid rgba(100, 226, 142, 0.6);
     transition: all 0.2s ease;
 }
 
 .tableRowEmpty-wrapper {
-    background-color: rgba(80, 20, 120, 0.15) !important;
-    border-bottom: 1px solid rgba(156, 100, 226, 0.6) !important;
-    border-left: 1px solid rgba(156, 100, 226, 0.6) !important;
+    background-color: rgba(20, 120, 23, 0.15) !important;
+    border-bottom: 1px solid rgba(100, 226, 121, 0.6) !important;
+    border-left: 1px solid rgba(100, 226, 108, 0.6) !important;
 }
 
 /* Table Headers */
 .table-header {
-    border: 1px solid rgba(156, 100, 226, 0.8) !important;
-    box-shadow: rgba(70, 20, 90, 0.3) 2px 3px 8px 1px;
-    background-color: rgba(60, 20, 90, 0.4) !important;
+    border: 1px solid rgba(100, 226, 104, 0.8) !important;
+    box-shadow: rgba(28, 90, 20, 0.3) 2px 3px 8px 1px;
+    background-color: rgba(20, 90, 50, 0.4) !important;
 }
 
 .table-header-label {
-    background-color: rgba(70, 20, 90, 0.2) !important;
+    background-color: rgba(23, 90, 20, 0.2) !important;
     transition: all 0.2s ease;
     padding: 10px !important;
 
     &:hover {
-        box-shadow: 0 0 8px rgba(156, 100, 226, 0.7) !important;
-        background-color: rgba(80, 30, 100, 0.3) !important;
+        box-shadow: 0 0 8px rgba(100, 226, 112, 0.7) !important;
+        background-color: rgba(30, 100, 37, 0.3) !important;
     }
 }
 
@@ -550,21 +550,21 @@
 
     &:hover {
         background-color: rgba(71, 168, 111, 0.7) !important;
-        box-shadow: 0 0 8px rgba(156, 100, 226, 0.7) !important;
+        box-shadow: 0 0 8px rgba(123, 226, 100, 0.7) !important;
     }
 }
 
 .listRowDesktop-item {
-    border-right: 1px solid rgba(156, 100, 226, 0.6) !important;
+    border-right: 1px solid rgba(104, 226, 100, 0.6) !important;
 }
 
 /* Row Title Info */
 .rowTitleInfo-inner {
     background-color: rgba(84, 194, 131, 0.95) !important;
-    box-shadow: rgba(156, 100, 226, 0.8) 0 0 15px 4px;
+    box-shadow: rgba(100, 226, 131, 0.8) 0 0 15px 4px;
     height: auto;
     border-radius: 6px;
-    border: 1px solid rgba(180, 130, 250, 0.6);
+    border: 1px solid rgba(130, 250, 164, 0.6);
 }
 
 /**************************************
@@ -575,7 +575,7 @@
 
     &:hover {
         transform: translateY(-5px);
-        box-shadow: 0 0 8px rgba(156, 100, 226, 0.7) !important;
+        box-shadow: 0 0 8px rgba(112, 226, 100, 0.7) !important;
 
         .cell-tile-background {
             transform: scale(1.1) !important;
@@ -584,20 +584,20 @@
 }
 
 .cell-tile-link {
-    box-shadow: 0 0 3px rgba(156, 100, 226, 0.5) !important;
-    border: 1px solid rgba(156, 100, 226, 0.7) !important;
+    box-shadow: 0 0 3px rgba(110, 226, 100, 0.5) !important;
+    border: 1px solid rgba(100, 226, 106, 0.7) !important;
     transition: all 0.3s ease;
     border-radius: 6px;
     overflow: hidden;
 }
 
 .cell-tile-info {
-    background-color: rgba(40, 10, 60, 0.85) !important;
+    background-color: rgba(13, 60, 10, 0.85) !important;
     transition: all 0.2s ease;
     padding: 10px;
 
     &:hover p:hover {
-        color: #d4c0ff !important;
+        color: #c8ffc0 !important;
     }
 }
 
@@ -609,7 +609,7 @@
 .modal-inner {
     border-radius: 12px !important;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2) !important;
-    background: rgba(25, 28, 36, 0.95) !important;
+    background: rgba(25, 36, 26, 0.95) !important;
     backdrop-filter: blur(12px) !important;
     border: 1px solid rgba(255, 255, 255, 0.1) !important;
     padding: 0 !important;
@@ -624,7 +624,7 @@
 
 /* Header Styling */
 .modal-header {
-    background: rgba(35, 38, 45, 0.8) !important;
+    background: rgba(35, 45, 36, 0.8) !important;
     padding: 15px 20px !important;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
     display: flex !important;
@@ -636,7 +636,7 @@
     margin: 0 !important;
     font-size: 1.2rem !important;
     font-weight: 600 !important;
-    color: #eceaec !important;
+    color: #eaecea !important;
     letter-spacing: 0.5px !important;
 }
 
@@ -694,13 +694,13 @@
     }
 
     &:hover {
-        background: rgb(150 94 208 / 30%) !important;
+        background: rgba(94, 208, 107, 0.3) !important;
     }
 }
 
 .checkbox-input {
     margin-right: 8px !important;
-    accent-color: #b91ffd !important;
+    accent-color: #1ffd4b !important;
 }
 
 .checkbox-label-text {
@@ -715,7 +715,7 @@
     line-height: 1.5 !important;
     opacity: 0.95 !important;
     padding: 10px 12px !important;
-    background-color: rgba(45, 48, 56, 0.95) !important;
+    background-color: rgba(45, 56, 46, 0.95) !important;
     backdrop-filter: blur(4px) !important;
     border: 1px solid rgba(255, 255, 255, 0.1) !important;
 }
@@ -753,12 +753,12 @@
 
 .tab-title.active {
     color: white !important;
-    border-bottom: 2px solid #eceaec !important;
+    border-bottom: 2px solid #eaecea !important;
 }
 
 .tab-title:hover:not(.active) {
-    color: #eceaec !important;
-    border-bottom: 2px solid rgba(236, 234, 236, 0.5) !important;
+    color: #eaecea !important;
+    border-bottom: 2px solid rgba(234, 236, 234, 0.5) !important;
 }
 
 
@@ -772,24 +772,24 @@
     /* Alternating Row Colors */
 
     > div:nth-child(2n) {
-        background-color: rgba(58, 15, 92, 0.8) !important;
+        background-color: rgba(15, 92, 23, 0.8) !important;
 
         &:hover {
-            background-color: rgba(71, 25, 108, 0.8) !important;
+            background-color: rgba(25, 108, 44, 0.8) !important;
         }
     }
 
     /* All Rows */
 
     > div {
-        border-top: 1px solid rgba(156, 100, 226, 0.7) !important;
-        border-bottom: 1px solid rgba(156, 100, 226, 0.7) !important;
-        background-color: rgba(70, 25, 100, 0.9) !important;
-        text-shadow: 0 0 5px rgba(156, 100, 226, 0.5);
+        border-top: 1px solid rgba(100, 226, 117, 0.7) !important;
+        border-bottom: 1px solid rgba(100, 226, 110, 0.7) !important;
+        background-color: rgba(25, 100, 30, 0.9) !important;
+        text-shadow: 0 0 5px rgba(100, 226, 138, 0.5);
         transition: all 0.2s ease;
 
         &:hover {
-            background-color: rgba(90, 40, 130, 0.9) !important;
+            background-color: rgba(40, 130, 45, 0.9) !important;
             transform: translateX(3px);
         }
     }
@@ -804,15 +804,15 @@
 }
 
 ::-webkit-scrollbar-track {
-    background: rgba(30, 10, 40, 0.5);
+    background: rgba(10, 40, 11, 0.5);
     border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: rgba(156, 100, 226, 0.6);
+    background: rgba(100, 226, 102, 0.6);
     border-radius: 10px;
 
     &:hover {
-        background: rgba(180, 130, 250, 0.8);
+        background: rgba(130, 250, 136, 0.8);
     }
 }
