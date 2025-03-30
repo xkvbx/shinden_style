@@ -1,0 +1,818 @@
+/**************************************
+ * MAIN LAYOUT ELEMENTS
+ **************************************/
+.layout-wrapper {
+    background-image: url("elaina-wandering-witch.jpg") !important;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.hero-image-container {
+    background-position: center top !important;
+    background-image: url("https://i.imgur.com/q2nggJD.png") !important;
+}
+
+.footer-wrapper {
+    background-color: rgba(84, 194, 131, 0.9) !important;
+    border-top: 1px solid rgba(156, 100, 226, 0.3);
+}
+
+/**************************************
+ * NAVIGATION BAR
+ **************************************/
+.navigation-background {
+    background-color: rgba(70, 40, 110, 0.85) !important;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+/* Navigation Items */
+.navigation-list-item {
+    border-bottom: 0 solid #eceaec !important;
+    color: white !important;
+    transition: all 0.2s ease-in-out;
+    position: relative;
+
+    /* Active Navigation Item */
+
+    .is-active {
+        border: none !important;
+        border-bottom: 3px solid #d4c0ff !important;
+        text-shadow: none !important;
+    }
+
+    /* Hover States */
+
+    &:hover {
+        a {
+            color: white !important;
+        }
+
+        &:not(:has(.is-active)) {
+            border: none !important;
+
+            &:has(> button) {
+                transform: translateY(-2px);
+            }
+
+            > a {
+                transform: translateY(-2px);
+            }
+        }
+
+        &:not(:has(> .is-active), :has(> button)) {
+            text-shadow: 0 0 12px rgba(255, 255, 255, 0.8) !important;
+
+            @media screen and (min-width: 1024px) {
+                border-bottom: 3px solid #ede5ff !important;
+            }
+        }
+    }
+}
+
+/* Navigation Buttons */
+.navigation-button {
+    color: #d2d2d2 !important;
+    transition: all 0.2s ease;
+
+    &:hover {
+        color: white !important;
+        transform: scale(1.05);
+
+        svg {
+            filter: drop-shadow(0 0 10px white) !important;
+        }
+    }
+}
+
+.navigation-inner {
+    &:hover {
+        transition: ease 300ms;
+
+        @media screen and (min-width: 1024px) {
+            background-color: rgb(96 39 191) !important;
+        }
+    }
+
+    @media screen and (max-width: 1024px) {
+        background-color: rgb(80 2 208) !important;
+    }
+}
+
+/**************************************
+ * SIDEBAR STYLING
+ **************************************/
+.sidebar-wrapper {
+    border: 2px solid rgba(128, 79, 178, 0.7);
+    background-color: rgba(20, 0, 30, 0.7);
+    padding: 18px;
+    border-radius: 25px !important;
+    box-shadow: 0 0 15px rgba(106, 61, 139, 0.6);
+}
+
+/* Sidebar List Items */
+.sidebar-list-item {
+    transition: all 0.3s ease;
+    border-radius: 4px;
+    margin-bottom: 2px;
+
+    &:hover {
+        animation-name: list-title;
+        animation-duration: 0.4s;
+        padding-left: 5%;
+        background-color: rgba(128, 79, 178, 0.15);
+
+        a > * {
+            text-shadow: 0 0 10px rgba(156, 100, 226, 0.8);
+            color: #b39ddb !important;
+        }
+    }
+
+
+    &.is-active {
+        border-bottom: 1px solid rgba(156, 100, 226, 0.8) !important;
+        background-image: linear-gradient(rgba(158, 64, 255, 0), rgba(161, 90, 255, 0.15));
+        padding-left: 5%;
+        border-radius: 12px 0 !important;
+        transition: background-color .4s ease;
+
+        & > a {
+            font-weight: 500;
+        }
+
+        & span {
+            color: #cea0ff !important;
+        }
+    }
+}
+
+/* Sidebar Accordion */
+.sidebar-accordion-icon {
+    color: rgba(156, 100, 226, 0.9) !important;
+    transition: transform 0.3s ease;
+
+    &:hover {
+        transform: scale(1.1);
+    }
+}
+
+/* Active Sidebar Groups */
+.sidebar-group .is-active:not(.sidebar-list-item) {
+    border: none !important;
+    background-color: transparent !important;
+}
+
+/* Clear button */
+.clearAll-btn {
+    &:hover {
+        color: #e6b2ff !important;
+        text-shadow: 0 0 8px #d990fc7d !important;
+    }
+}
+
+/* **************************************
+ * PAPER (Mui dropdown) STYLING
+ ***************************************/
+.MuiPaper-root {
+    background: transparent !important;
+}
+.dropdown-button {
+    background-color: rgba(39, 92, 61, 0.7) !important;
+    border: 1px solid rgba(156, 100, 226, 0.75) !important;
+    box-shadow: 0 0 5px rgba(156, 100, 226, 0.5) !important;
+    border-radius: 5px;
+    transition: all 0.2s ease;
+
+    &:hover {
+        background-color: rgba(71, 168, 111, 0.8) !important;
+        box-shadow: 0 0 8px rgba(156, 100, 226, 0.7) !important;
+        transform: translateY(-2px);
+    }
+}
+
+.dropdown-list {
+    border: 1px solid rgba(156, 100, 226, 0.8) !important;
+    background: radial-gradient(circle, rgba(90, 40, 120, 0.9), rgba(60, 20, 80, 0.9));
+    border-radius: 6px !important;
+    box-shadow: 0 0 10px rgba(156, 100, 226, 0.6) !important;
+
+    li button {
+        transition: all 0.2s ease !important;
+    }
+}
+
+.list-button {
+    transition: all 0.2s ease;
+    border-radius: 4px;
+    margin: 2px;
+
+    &:hover {
+        background: rgba(156, 100, 226, 0.8) !important;
+        transform: translateX(3px);
+    }
+}
+
+
+/* **************************************
+ * SLIDER STYLING
+ **************************************/
+.MuiSlider-root {
+    color: rgba(156, 100, 226, 0.9) !important;
+
+    /* Styling for track element */
+    & .MuiSlider-track {
+        background-image: linear-gradient(
+                to right,
+                rgba(156, 100, 226, 0.8),
+                rgba(177, 132, 227, 0.9)
+        ) !important;
+    }
+
+    /* Thumb + label/text elements */
+    & .MuiSlider-thumb {
+        z-index: 9999;
+        background-color: rgba(156, 100, 226, 0.9) !important;
+        border: 2px solid rgba(255, 255, 255, 0.3);
+        box-shadow: 0 0 12px rgba(156, 100, 226, 0.5) !important;
+        transition: all 0.3s ease;
+
+        /* Label showing corresponding year */
+        & > * > * {
+            background: linear-gradient(
+                    to bottom right,
+                    rgba(20, 0, 30, 0.95),
+                    rgba(50, 20, 70, 0.95)
+            ) !important;
+            border: 1px solid rgba(156, 100, 226, 0.6);
+            padding: 18px 18px;
+
+            * {
+                background: transparent;
+            }
+        }
+
+        /* Hover effect for label showing corresponding year */
+        /* When slider is moved by user */
+        &.MuiSlider-active {
+            transform: rotate(0deg) !important;
+        }
+        /* Overwrite style when cursor is over the thumb */
+        &:hover {
+            transform: scale(1.2) rotate(45deg) !important;
+        }
+
+        /* Text spans for label showing corresponding year */
+        & .MuiSlider-valueLabel span span {
+            color: #d9b1ff !important;
+            text-shadow: 0 0 6px rgba(156, 100, 226, 0.5);
+            transform: rotate(-44deg) !important;
+        }
+    }
+
+    /* Hover effect for main track */
+    &:hover .MuiSlider-track {
+        box-shadow: 0 0 12px rgba(156, 100, 226, 0.6);
+    }
+}
+
+/* Premiere dates for MuiSlider */
+.premiere-dates-wrapper {
+    color: #c5b0e5 !important;
+    border: 1px solid rgba(156, 100, 226, 0.8) !important;
+    background-color: rgba(40, 10, 60, 0.7) !important;
+    box-shadow: 0 0 5px rgba(106, 61, 139, 0.5);
+    transition: all 0.2s ease;
+
+    > button {
+        color: #c5b0e5 !important;
+
+        > svg {
+            transition: all 0.2s ease;
+        }
+
+        &:hover {
+            color: #ffffff !important;
+
+            > svg {
+                filter: drop-shadow(0 0 5px white) !important;
+            }
+        }
+    }
+}
+
+/* Text below slider */
+.premiereManualChanger-cta:hover {
+    transition: none;
+    color: #e6b2ff !important;
+    text-shadow: 0 0 8px #d990fc7d !important;
+}
+
+/**************************************
+ * FORM ELEMENTS
+ **************************************/
+/* Input Fields */
+.input-element {
+    border-radius: 6px !important;
+    border: 1px solid rgba(156, 100, 226, 0.8) !important;
+    background-color: rgba(40, 20, 70, 0.5) !important;
+    box-shadow: 0 0 5px rgba(106, 61, 139, 0.5);
+    transition: all 0.2s ease;
+    color: white !important;
+
+    &:hover, &:focus {
+        text-shadow: 0 0 10px rgba(156, 100, 226, 0.8) !important;
+        box-shadow: 0 0 12px rgba(156, 100, 226, 0.7) !important;
+        border-color: rgba(180, 130, 250, 0.9) !important;
+        transform: translateY(-1px);
+    }
+}
+
+.input-wrapper {
+    border-radius: 6px !important;
+}
+
+/* Dropdown Controls */
+.custom-dropdown-control,
+.advanced-tags-btn {
+    color: #c5b0e5;
+    border: 1px solid rgba(156, 100, 226, 0.8) !important;
+    background-color: rgba(40, 10, 60, 0.7) !important;
+    box-shadow: 0 0 5px rgba(106, 61, 139, 0.5);
+    transition: all 0.2s ease;
+
+    &:hover {
+        text-shadow: 0 0 10px rgba(156, 100, 226, 0.8) !important;
+        box-shadow: 0 0 12px rgba(156, 100, 226, 0.7) !important;
+        border-color: rgba(180, 130, 250, 0.9) !important;
+        transform: translateY(-1px);
+    }
+
+    &:hover div:last-child div:last-child svg {
+        color: rgb(255, 255, 255) !important;
+        transform: scale(1.1);
+    }
+
+    svg {
+        color: rgb(200, 200, 200) !important;
+        transition: all 0.2s ease;
+    }
+
+    > div > div {
+        color: white !important;
+    }
+}
+
+/* Force hover effect if dropdown is active */
+/* CONDITIONS: FOR NORMAL DROPDOWN */
+    /* Check by css class  */
+.custom-dropdown:has(.css-26l3qy-menu) .custom-dropdown-control,
+    /* Check if the dropdown div exists */
+.custom-dropdown:has(:nth-child(4)) .custom-dropdown-control,
+/* FOR ASYNC DROPDOWN */
+    /* Check by css class  */
+.custom-async-dropdown:has(.css-26l3qy-menu) .custom-dropdown-control,
+    /* Check if the dropdown div exists */
+.custom-async-dropdown:has(:nth-child(3)) .custom-dropdown-control {
+    text-shadow: 0 0 10px rgba(156, 100, 226, 0.8) !important;
+    box-shadow: 0 0 12px rgba(156, 100, 226, 0.7) !important;
+    border-color: rgba(180, 130, 250, 0.9) !important;
+    transform: translateY(-1px);
+}
+
+/* Dropdown Animation */
+.custom-dropdown-control ~ [class*="css-"] {
+    background-color: rgba(40, 10, 60, 0.85) !important;
+    animation: dropdown 0.3s ease-out forwards;
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    display: block !important;
+    border-radius: 6px;
+    border: 1px solid rgba(156, 100, 226, 0.6);
+}
+
+@keyframes dropdown {
+    to {
+        opacity: 1;
+        max-height: 500px;
+    }
+}
+
+/**************************************
+ * MAIN CONTENT AREA
+ **************************************/
+.view-content-wrapper {
+    border-radius: 25px 0 0 !important;
+    box-shadow: 0 0 20px rgba(106, 61, 139, 0.6) !important;
+    background-color: rgba(20, 0, 30, 0.7) !important;
+    border: 2px solid rgba(156, 100, 226, 0.7) !important;
+}
+
+/* Control buttons for main content */
+.view-content-header-button {
+    &:hover {
+        &, * {
+            color: #e6b2ff !important;
+            text-shadow: 0 0 8px #d990fc7d !important;
+        }
+    }
+}
+
+/* View Changer Buttons */
+.view-changer-button {
+    background-color: rgba(39, 92, 61, 0.7) !important;
+    border: 1px solid rgba(156, 100, 226, 0.75) !important;
+    box-shadow: 0 0 5px rgba(156, 100, 226, 0.5) !important;
+    transition: all 0.2s ease;
+
+    &:hover {
+        background-color: rgba(131, 41, 189, 0.8) !important;
+    }
+
+    &.is-active {
+        box-shadow: 0 0 8px rgb(190 139 255) !important;
+        scale: 1.015 !important;
+    }
+}
+
+.statsPanel-item-count {
+    color: white !important;
+}
+
+/**************************************
+ * SETTINGS AREA
+ **************************************/
+.settingsContent-wrapper {
+    border-radius: 8px !important;
+    box-shadow: 0 0 20px rgba(106, 61, 139, 0.6) !important;
+    background-color: rgba(20, 0, 30, 0.7) !important;
+    border: 2px solid rgba(156, 100, 226, 0.7) !important;
+}
+
+.button-wrapper .button {
+    color: white !important;
+    background-color: rgba(39, 92, 61, 0.7) !important;
+    border: 1px solid rgba(156, 100, 226, 0.75) !important;
+    box-shadow: 0 0 5px rgba(156, 100, 226, 0.5) !important;
+    border-radius: 20px 0;
+    transition: all 0.2s ease;
+
+    &:hover {
+        background-color: rgba(71, 168, 111, 0.8) !important;
+        box-shadow: 0 0 8px rgba(156, 100, 226, 0.7) !important;
+    }
+}
+
+/**************************************
+* SCROLL TO TOP BUTTON
+**************************************/
+/* Back to Top Button */
+.back-to-top-btn {
+    z-index: 9999 !important;
+    background-color: rgba(39, 92, 61, 0.85) !important;
+    border: 2px solid rgba(156, 100, 226, 0.8) !important;
+    box-shadow: 0 0 10px rgba(106, 61, 139, 0.6) !important;
+    color: #d4c0ff !important;
+    opacity: 0.9 !important;
+    transition: all 0.25s ease;
+    animation: fadeIn 0.3s ease-in-out forwards;
+
+    svg {
+        transition: transform 0.3s ease;
+    }
+
+    &:hover {
+        background-color: rgba(71, 168, 111, 0.9) !important;
+
+        svg {
+            transform: scale(1.1);
+            filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.7));
+        }
+    }
+}
+
+/* Scrolling Animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        bottom: 80px;
+    }
+    100% {
+        opacity: 0.9;
+        bottom: 15px;
+    }
+}
+
+
+/**************************************
+ * TABLE STYLING
+ **************************************/
+.table-header-arrow.is-active {
+    color: #b39ddb !important;
+}
+
+/* Table Rows */
+.listRowDesktop-wrapper {
+    background-color: rgba(80, 20, 120, 0.15) !important;
+    border-bottom: 1px solid rgba(156, 100, 226, 0.6);
+    border-left: 1px solid rgba(156, 100, 226, 0.6);
+    transition: all 0.2s ease;
+}
+
+.tableRowEmpty-wrapper {
+    background-color: rgba(80, 20, 120, 0.15) !important;
+    border-bottom: 1px solid rgba(156, 100, 226, 0.6) !important;
+    border-left: 1px solid rgba(156, 100, 226, 0.6) !important;
+}
+
+/* Table Headers */
+.table-header {
+    border: 1px solid rgba(156, 100, 226, 0.8) !important;
+    box-shadow: rgba(70, 20, 90, 0.3) 2px 3px 8px 1px;
+    background-color: rgba(60, 20, 90, 0.4) !important;
+}
+
+.table-header-label {
+    background-color: rgba(70, 20, 90, 0.2) !important;
+    transition: all 0.2s ease;
+    padding: 10px !important;
+
+    &:hover {
+        box-shadow: 0 0 8px rgba(156, 100, 226, 0.7) !important;
+        background-color: rgba(80, 30, 100, 0.3) !important;
+    }
+}
+
+/* Table Content */
+.listRowDesktop-content {
+    transition: all 0.2s ease;
+
+    &:hover {
+        background-color: rgba(71, 168, 111, 0.7) !important;
+        box-shadow: 0 0 8px rgba(156, 100, 226, 0.7) !important;
+    }
+}
+
+.listRowDesktop-item {
+    border-right: 1px solid rgba(156, 100, 226, 0.6) !important;
+}
+
+/* Row Title Info */
+.rowTitleInfo-inner {
+    background-color: rgba(84, 194, 131, 0.95) !important;
+    box-shadow: rgba(156, 100, 226, 0.8) 0 0 15px 4px;
+    height: auto;
+    border-radius: 6px;
+    border: 1px solid rgba(180, 130, 250, 0.6);
+}
+
+/**************************************
+ * CELLS AND TILES
+ **************************************/
+.cell-tile-wrapper {
+    transition: all 0.3s ease;
+
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 0 8px rgba(156, 100, 226, 0.7) !important;
+
+        .cell-tile-background {
+            transform: scale(1.1) !important;
+        }
+    }
+}
+
+.cell-tile-link {
+    box-shadow: 0 0 3px rgba(156, 100, 226, 0.5) !important;
+    border: 1px solid rgba(156, 100, 226, 0.7) !important;
+    transition: all 0.3s ease;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.cell-tile-info {
+    background-color: rgba(40, 10, 60, 0.85) !important;
+    transition: all 0.2s ease;
+    padding: 10px;
+
+    &:hover p:hover {
+        color: #d4c0ff !important;
+    }
+}
+
+/**************************************
+ * MODAL STYLING
+ **************************************/
+
+/* Modal Container and Background */
+.modal-inner {
+    border-radius: 12px !important;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2) !important;
+    background: rgba(25, 28, 36, 0.95) !important;
+    backdrop-filter: blur(12px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+}
+
+.modal-content {
+    padding: 20px !important;
+    overflow-y: hidden !important;
+    scrollbar-width: thin !important;
+}
+
+/* Header Styling */
+.modal-header {
+    background: rgba(35, 38, 45, 0.8) !important;
+    padding: 15px 20px !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+}
+
+.modal-header h4 {
+    margin: 0 !important;
+    font-size: 1.2rem !important;
+    font-weight: 600 !important;
+    color: #eceaec !important;
+    letter-spacing: 0.5px !important;
+}
+
+.modal-close {
+    background: transparent !important;
+    border: none !important;
+    color: #aaa !important;
+    cursor: pointer !important;
+    transition: color 0.2s !important;
+}
+
+.modal-close:hover {
+    color: #fff !important;
+}
+
+/* Tab Navigation */
+.tab-header-list {
+    display: flex !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+    margin: 0 0 20px !important;
+    padding: 0 !important;
+    overflow-x: auto !important;
+    scrollbar-width: none !important;
+}
+
+/* Tag List Styling */
+.advanced-tags-wrapper {
+    overflow-x: hidden !important;
+}
+
+.advanced-tags-list {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)) !important;
+    gap: 10px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.advanced-tag-item {
+    list-style: none !important;
+}
+
+.checkbox-label {
+    display: flex !important;
+    align-items: center !important;
+    cursor: pointer !important;
+    padding: 6px 10px !important;
+    border-radius: 6px !important;
+    transition: background 0.2s !important;
+}
+
+.checkbox-label {
+    &::before, &::after {
+        margin-left: 10px !important;
+    }
+
+    &:hover {
+        background: rgb(150 94 208 / 30%) !important;
+    }
+}
+
+.checkbox-input {
+    margin-right: 8px !important;
+    accent-color: #b91ffd !important;
+}
+
+.checkbox-label-text {
+    color: #ddd !important;
+    font-size: 14px !important;
+}
+
+/* Tooltip Styling */
+.__react_component_tooltip {
+    border-radius: 6px !important;
+    font-size: 13px !important;
+    line-height: 1.5 !important;
+    opacity: 0.95 !important;
+    padding: 10px 12px !important;
+    background-color: rgba(45, 48, 56, 0.95) !important;
+    backdrop-filter: blur(4px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Scrollbar Customization */
+.modal-content::-webkit-scrollbar {
+    width: 6px !important;
+}
+
+.modal-content::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1) !important;
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2) !important;
+    border-radius: 3px !important;
+}
+
+.modal-content::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.3) !important;
+}
+
+.tab-title {
+    border-left: none !important;
+    border-right: none !important;
+    border-top: none !important;
+    padding: 10px 16px !important;
+    color: #aaa !important;
+    cursor: pointer !important;
+    border-bottom: 2px solid transparent !important;
+    transition: all 100ms ease !important;
+    white-space: nowrap !important;
+    list-style: none !important;
+}
+
+.tab-title.active {
+    color: white !important;
+    border-bottom: 2px solid #eceaec !important;
+}
+
+.tab-title:hover:not(.active) {
+    color: #eceaec !important;
+    border-bottom: 2px solid rgba(236, 234, 236, 0.5) !important;
+}
+
+
+/**************************************
+ * SELECT OPTIONS
+ **************************************/
+.css-11unzgr {
+    overflow: hidden;
+    padding: 2px;
+
+    /* Alternating Row Colors */
+
+    > div:nth-child(2n) {
+        background-color: rgba(58, 15, 92, 0.8) !important;
+
+        &:hover {
+            background-color: rgba(71, 25, 108, 0.8) !important;
+        }
+    }
+
+    /* All Rows */
+
+    > div {
+        border-top: 1px solid rgba(156, 100, 226, 0.7) !important;
+        border-bottom: 1px solid rgba(156, 100, 226, 0.7) !important;
+        background-color: rgba(70, 25, 100, 0.9) !important;
+        text-shadow: 0 0 5px rgba(156, 100, 226, 0.5);
+        transition: all 0.2s ease;
+
+        &:hover {
+            background-color: rgba(90, 40, 130, 0.9) !important;
+            transform: translateX(3px);
+        }
+    }
+}
+
+/**************************************
+ * SCROLLBAR CUSTOMIZATION
+ **************************************/
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(30, 10, 40, 0.5);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(156, 100, 226, 0.6);
+    border-radius: 10px;
+
+    &:hover {
+        background: rgba(180, 130, 250, 0.8);
+    }
+}
