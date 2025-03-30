@@ -38,7 +38,7 @@
 
     .is-active {
         border: none !important;
-        border-bottom: 3px solid #d4c0ff !important;
+        border-bottom: 3px solid #c0ffd2 !important;
         text-shadow: none !important;
     }
 
@@ -121,11 +121,11 @@
         animation-name: list-title;
         animation-duration: 0.4s;
         padding-left: 5%;
-        background-color: rgba(128, 79, 178, 0.15);
+        background-color: rgba(79, 178, 97, 0.15);
 
         a > * {
-            text-shadow: 0 0 10px rgba(156, 100, 226, 0.8);
-            color: #b39ddb !important;
+            text-shadow: 0 0 10px rgba(100, 226, 144, 0.8);
+            color: #9ddbb0 !important;
         }
     }
 
